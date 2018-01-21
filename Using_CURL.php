@@ -9,10 +9,9 @@ $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL,"https://login.salesforce.com/services/oauth2/token");
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS,
-            
+curl_setopt($ch, CURLOPT_POSTFIELDS,         
 
-"grant_type=password&client_id=<client id from salesforce>&client_secret=<client sec=cret from salesforce>&username=<your salesforce usename>&password=<your salesforce password>");
+"grant_type=password&client_id=<client id from salesforce>&client_secret=<client seccret from salesforce>&username=<your salesforce username>&password=<your salesforce password>");
 
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
