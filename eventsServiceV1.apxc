@@ -1,0 +1,24 @@
+@RestResource(urlMapping='/eventsServiceV1/*')
+global with sharing class eventsServiceV1 {
+
+    @HttpGet
+    global static events__c getEvents() {
+        RestRequest req = RestContext.request;
+        RestResponse res = RestContext.response;
+        String accountId = req.requestURI.substring(req.requestURI.lastIndexOf('/')+1);
+        events__c result = [SELECT Id, Name FROM events__c WHERE Id = 'a0N7F000005BqnQ'];
+        return result;
+    }
+    
+    @HttpDelete
+    global static void doDelete() {
+       // code to delete record
+    }
+  
+   
+  
+  @HttpPost
+    global static String doPost(String name,
+        // code to post
+    }
+}
