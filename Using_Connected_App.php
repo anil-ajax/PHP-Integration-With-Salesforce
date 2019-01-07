@@ -5,6 +5,8 @@
  * @author Anil Kumar (https://github.com/anil-ajax)
  */
 
+// IT REQUIRES HTTPS BASED REDIRECT_URI. SO EVEN IF YOU USING LOCALHOST MAKE SURE YOU CONFIGURE HTTPS://LOCALHOST FIRST
+
 session_start();
 
 define("CLIENT_ID", "<client id from connected app in salesforce>");
