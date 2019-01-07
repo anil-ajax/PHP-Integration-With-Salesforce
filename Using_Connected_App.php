@@ -16,7 +16,7 @@ define("LOGIN_URI", "https://login.salesforce.com");
 
 $auth_url = LOGIN_URI
         . "/services/oauth2/authorize?response_type=code&client_id="
-        . CLIENT_ID . "&state=" . urlencode(json_encode($obj)) . "&redirect_uri=" . REDIRECT_URI;
+        . CLIENT_ID . "&redirect_uri=" . REDIRECT_URI;
 
-header('location: ' . $auth_url);
+header('location: ' . $auth_url); // you will get session appended in URL. Use this session for communication with sf
 ?>
