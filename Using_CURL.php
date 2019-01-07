@@ -30,6 +30,7 @@ $token = $res->access_token;
 $ch = curl_init();
 
 // productServiceV2 - it is an apex class in salesforce. Created as REST resource
+// refer to eventsServiceV1.apxc for apex code
 curl_setopt($ch, CURLOPT_URL,"https://anil99-dev-ed.my.salesforce.com/services/apexrest/eventsServiceV1");
 curl_setopt($ch, CURLOPT_POST, 0);
 
